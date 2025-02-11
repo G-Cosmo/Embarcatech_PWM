@@ -8,6 +8,9 @@ Inicialmente, esse ciclo é alterado três vezes de maneira instantânea, com in
 Após isso, o programa entra em um loop que gradualmente incrementa e decrementa o ciclo de trabalho do PWM em aproximadamente 0,024% a cada 10 milissegundos.
 O incremento ocorre enquanto o ciclo de trabalho for menor que 12%, e o decremento ocorre enquanto for maior que 2,5%. Esse controle é realizado com o auxílio de uma flag, que indica se a rotina deve incrementar ou decrementar o ciclo.
 
+Em resposta ao questionamento feito pelo professor sobre o comportamento observado no LED, é possível perceber que sua intensidade luminosa é definida pelo ciclo de trabalho do sinal PWM gerado no pino correspondente, uma vez que o ciclo de trabalho determina a tensão média nos terminais do LED.
+
+Nesse caso, o LED não atinge sua intensidade máxima nem mínima devido à configuração dos ciclos de trabalho. Além disso, embora o sinal PWM faça o LED piscar com a alteração do nível de tensão, essa mudança de estado ocorre de forma tão rápida que não pode ser percebida a olho nu, dando a impressão de que o LED permanece aceso durante todo o processo.
 
 # Instruções de compilação
 
